@@ -1,0 +1,3 @@
+http transfers everything in bytes in
+JSON convert the data into string format (everything is converted in to string)
+JSON cannot transfer objects but can transfer a string which contains objects

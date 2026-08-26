@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll‑Triggered · robot · text reveal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f7fb;
+      overflow-x: hidden;
+    }
+    
+    .hero {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(145deg, #d4e0f0 0%, #b0c8e0 100%);
+      position: relative;
+    }
+    .hero-content {
+      text-align: center;
+      color: #1e2b3c;
+    }
+    .hero-content h1 {
+      font-size: clamp(2.8rem, 10vw, 5rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .hero-content p {
+      font-size: 1.4rem;
+      opacity: 0.7;
+      margin-top: 0.5rem;
+    }
+    .scroll-hint {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-weight: 400;
+      color: #2a3a4e;
+      animation: bob 2s infinite;
+    }
+    @keyframes bob {
+      0% { transform: translateY(0); opacity: 0.7; }
+      50% { transform: translateY(8px); opacity: 1; }
+      100% { transform: translateY(0); opacity: 0.7; }
+    }
+
+    .about {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #eef3f9;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .about svg {
+      width: 70vmin;
+      max-width: 500px;
+      height: auto;
+      display: block;
+      fill: none;
+      stroke: #1f3a4b;
+      stroke-width: 6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      filter: blur(0px);
+      will-change: transform, filter;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .text-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      padding: 1.5rem;
+      z-index: 10;
+    }
+    
+    .text-overlay .animate-text {
+      display: block;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      font-weight: 700;
+      color: #0b1a26;
+      line-height: 1.4;
+      margin: 0.2rem 0;
+      letter-spacing: -0.02em;
+      text-shadow: 0 2px 10px rgba(255, 255, 255, 0.8);
+    }
+    
+    .text-overlay .animate-text:last-child {
+      font-size: clamp(1.6rem, 4vw, 2.8rem);
+      font-weight: 400;
+      margin-top: 0.1rem;
+    }
+    
+    .text-overlay .animate-text .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    
+    .next-section {
+      height: 100vh;
+      width: 100%;
+      background: #d9e2ed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.4rem;
+      font-weight: 400;
+      color: #1f3347;
+      letter-spacing: 1px;
+    }
+    .next-section span {
+      background: rgba(255,255,255,0.3);
+      padding: 0.6rem 2rem;
+      border-radius: 60px;
+      backdrop-filter: blur(4px);
+    }
+    
+    @media (max-width: 600px) {
+      .text-overlay .animate-text {
+        white-space: normal;
+        text-align: center;
+      }
+      .text-overlay .animate-text .word {
+        transform: translateX(-20px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1>⚡ robo‑buddy</h1>
+      <p>zero‑emissions · infinite charm</p>
+    </div>
+    <div class="scroll-hint">↓ scroll down ↓</div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-container">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <rect x="40" y="50" width="120" height="90" rx="30" stroke="currentColor" stroke-width="6" fill="#d9e6f2" />
+        <line x1="100" y1="50" x2="100" y2="20" stroke="currentColor" stroke-width="6" stroke-linecap="round" />
+        <circle cx="100" cy="15" r="10" fill="#7aa5c2" stroke="currentColor" stroke-width="4" />
+        <circle cx="70" cy="90" r="12" fill="#1f3a4b" />
+        <circle cx="130" cy="90" r="12" fill="#1f3a4b" />
+        <circle cx="74" cy="86" r="4" fill="white" />
+        <circle cx="134" cy="86" r="4" fill="white" />
+        <path d="M70 115 Q100 135 130 115" stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round" />
+        <circle cx="55" cy="108" r="8" fill="#f5a3a3" opacity="0.5" />
+        <circle cx="145" cy="108" r="8" fill="#f5a3a3" opacity="0.5" />
+        <rect x="50" y="140" width="100" height="20" rx="10" fill="#b3c9db" stroke="currentColor" stroke-width="4" />
+        <circle cx="70" cy="160" r="8" fill="#2e4c66" />
+        <circle cx="130" cy="160" r="8" fill="#2e4c66" />
+        <path d="M160 35 Q180 20 175 45 Q165 40 160 35" fill="#6da56a" stroke="#2e5a3a" stroke-width="2" />
+      </svg>
+
+      <div class="text-overlay">
+        <div class="animate-text" id="line1">✨ Meet the cutest low‑emissions</div>
+        <div class="animate-text" id="line2">delivery robot known to humans.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="next-section" id="next">
+    <span>🚀 next · scroll further</span>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Split text into words and wrap with spans
+    function splitTextIntoWords() {
+      const lines = document.querySelectorAll('.animate-text');
+      lines.forEach(line => {
+        const text = line.textContent.trim();
+        const words = text.split(/\s+/);
+        line.innerHTML = '';
+        words.forEach((word, i) => {
+          const span = document.createElement('span');
+          span.className = 'word';
+          span.textContent = word;
+          line.appendChild(span);
+          if (i < words.length - 1) {
+            line.appendChild(document.createTextNode(' '));
+          }
+        });
+      });
+    }
+
+    // Initialize
+    splitTextIntoWords();
+
+    // Get all word spans in order (line1 words first, then line2 words)
+    const line1Words = document.querySelectorAll('#line1 .word');
+    const line2Words = document.querySelectorAll('#line2 .word');
+    const allWords = [...line1Words, ...line2Words];
+
+    // Set initial state
+    gsap.set(allWords, {
+      opacity: 0,
+      x: -40
+    });
+
+    // Main timeline for SVG scaling and blurring
+    const mainTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".about",
+        start: "top top",
+        end: "+=800",
+        scrub: 2,
+        pin: true,
+        markers: false,
+      }
+    });
+
+    mainTl.to(".about svg", {
+      scale: 1.8,
+      filter: "blur(12px)",
+      duration: 1.4,
+      ease: "power2.inOut",
+    });
+
+    // Text reveal timeline - word by word
+    const textTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".about",
+        start: "top 20%",
+        end: "top 5%",
+        scrub: 1.5,
+        markers: false,
+      }
+    });
+
+    // Animate line 1 words first, then line 2 words
+    textTl
+      .to(line1Words, {
+        opacity: 1,
+        x: 0,
+        duration: 0.5,
+        stagger: 0.1,
+        ease: "power2.out",
+      })
+      .to(line2Words, {
+        opacity: 1,
+        x: 0,
+        duration: 0.5,
+        stagger: 0.1,
+        ease: "power2.out",
+      }, "-=0.2"); // Overlap slightly for smooth transition
+
+    // Ensure SVG starts at correct state
+    gsap.set(".about svg", {
+      scale: 1,
+      filter: "blur(0px)"
+    });
+
+  </script>
+</body>
+</html>

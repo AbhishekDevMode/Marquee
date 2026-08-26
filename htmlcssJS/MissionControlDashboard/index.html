@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+
+      <header class="header">
+        <div class="header-left">
+        <i class="fas fa-rocket"></i>
+        <h1>Mission Control</h1>
+      </div>
+      <div class="heder-actions">
+        <div class="search-wrapper">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search missions..." val="Orion" />
+          <button>
+            <i class="fas fa-sliders-h"></i>
+            Filter
+          </button>
+        </div>
+        <button class="refresh-btn" id="refreshBtn" aria-labe="Refresh">
+          <i class="fas fa-sync-alt"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="main-grid">
+        <div class="left-col">
+          <div class="cards-container" id="missionCardsContainer">
+            <!-- first card -->
+            <div class="mission-card">
+              <div class="card-title">
+                <h3>Artemis III</h3>
+                <span class="card-badge">Lunar</span>
+              </div>
+              <div class="card-desc">Crewd Landing near Shackleton crater</div>
+              <div class="card-meta">
+                <span><i class="far fa-calendar-alt"></i>2026</span>
+                <span><i class="far fa-flag-checkered"></i>78%</span>
+              </div>
+            </div>
+            <!-- Second-Card -->
+            <div class="mission-card">
+              <div class="card-title">
+                <h3>Europa Clipper</h3>
+                <span class="card-badge">Flyby</span>
+              </div>
+              <div class="card-desc">Jupiter moon flyby & gravity assist</div>
+              <div class="card-meta">
+                <span><i class="far fa-calendar-alt"></i> 2026-04</span>
+                <span><i class="fas fa-flag-checkered"></i> 92%</span>
+              </div>
+            </div>
+            <!-- Third-Card -->
+            <div class="mission-card">
+              <div class="card-title">
+                <h3>Mars Sample</h3>
+                <span class="card-badge">Return</span>
+              </div>
+              <div class="card-desc">Sample retrieval & Earth return</div>
+              <div class="card-meta">
+                <span><i class="far fa-calendar-alt"></i> 2027-02</span>
+                <span><i class="fas fa-flag-checkered"></i> 61%</span>
+              </div>
+            </div>
+            <!-- Fourth-card -->
+          <div class="mission-card">
+            <div class="card-title">
+              <h3>ExoMars</h3>
+              <span class="card-badge">Rover</span>
+            </div>
+            <div class="card-desc">Rosalind Franklin rover deployment</div>
+            <div class="card-meta">
+              <span><i class="far fa-calendar-alt"></i> 2028-01</span>
+              <span><i class="fas fa-flag-checkered"></i> 43%</span>
+            </div>
+          </div>
+          <div id="loaderArea" class="loader-area-hidden">
+            <div class="loader"></div>
+            <span>Syncing mission data...</span>
+          </div>
+          <div id="errorArea" class="error-area hidden">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span id="errorMessage">⚠️ Mission feed unavailable. Please refresh.</span>
+          </div>
+        </div>
+        <aside class="details-panel">
+        <h2><i class="fas fa-satellite" style="margin-right: 8px;"></i> Mission Details</h2>
+        <div class="detail-item">
+          <div class="detail-label">Current focus</div>
+          <div class="detail-value"><i class="fas fa-globe-americas"></i> Artemis III</div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-label">Status</div>
+          <div class="detail-value"><span class="status-badge"><i class="fas fa-circle" style="color: #7aff8a; font-size: 0.5rem; margin-right: 6px;"></i> Operational</span></div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-label">Crew</div>
+          <div class="detail-value"><i class="fas fa-user-astronaut"></i> 4 astronauts</div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-label">Launch vehicle</div>
+          <div class="detail-value"><i class="fas fa-rocket"></i> SLS Block 1</div>
+        </div>
+
+        <!-- COUNTDOWN SECTION -->
+        <div class="countdown-section">
+          <div class="detail-label"><i class="fas fa-hourglass-half"></i> Countdown</div>
+          <div class="countdown-timer">
+            <i class="fas fa-clock"></i>
+            <span class="time-unit">12</span>
+            <span style="color: #6c8cff; font-weight: 300;">:</span>
+            <span class="time-unit">38</span>
+            <span style="color: #6c8cff; font-weight: 300;">:</span>
+            <span class="time-unit">24</span>
+          </div>
+          <div style="color: #5f79a8; font-size: 0.7rem; margin-top: 6px; letter-spacing: 0.5px;">until T-0 · 14 Sep 2026 14:30 UTC</div>
+        </div>
+      </aside>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer></footer>
+    <script src="index.js"></script>
+  </div>
+  </body>
+</html>

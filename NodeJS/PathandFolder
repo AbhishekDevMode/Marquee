@@ -1,0 +1,9 @@
+const path = require("path");
+const fs = require("fs");
+
+fs.rename("abc.txt", "abcd.txt", (err) => {
+  if (err) throw err;
+  console.log("Renamed");
+});
+
+// console.log(path.resolve("demo.txt"));

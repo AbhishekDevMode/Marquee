@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+
+    <style>
+      .highlight {
+        color: blue;
+        font-weight: bold;
+      }
+    </style>
+
+    <!-- <form action="submit" method="get">
+        <label for="user_name">Name:</label>
+        <input type="text" placeholder="User Name" id="user_name">
+    <input type="number">
+    <input type="email" name="" id="email">
+    <input type="submit">
+    </form> -->
+
+    <!-- <a href="index.html" target="_parent">Css Basics</a> -->
+
+    <!-- <button class="head" >0</button> -->
+    <!-- <h1 class="head">hi abhishek</h1> -->
+
+    <!-- <h1
+      id="temp"
+      style="color: red; background-color: blue; text-overflow: ellipsis"
+    >
+      Abhishek
+    </h1> -->
+
+    <!-- <p id="msg">Hello Abhishek</p> -->
+
+    <!-- <div class="box"></div> -->
+    <!-- <p id="text">Hello Abhishek</p> -->
+    <!-- <p id="text1">adding a class</p> -->
+    <!-- <p class="highlight" >adding a class</p> -->
+     
+     <h1 class="head">Abhishek Vishwakarma</h1>
+     <h2 class="head">Abhishek Vishwakarma</h2>
+     <h3 class="head">Abhishek Vishwakarma</h3>
+     <h4 class="head">Abhishek Vishwakarma</h4>
+     <h5 class="head">Abhishek Vishwakarma</h5>
+
+    <button onclick="onIn()">Click me</button>
+    <!-- <p id="demo">Old text</p> -->
+
+    <script>
+
+      const head = document.querySelectorAll(".head");
+      
+      let count = 0;
+      
+      let a = ["Hello", "Abhishek", "What are", "you", "Doing", "?"];
+      
+      function onIn() {
+        head.textContent = a[count];
+        // head.innerHTML();
+        count++;
+      }
+
+      let s = "Gello";
+      // let temp = document.getElementById("temp").style.color = "green";
+      // let date =document.getElementById("msg").textContent = "hi i am abhishek";
+      // console.log(msg);
+      // document.querySelector(".box").innerHTML = "<i>Updated content</i>";
+      document.getElementById("text").style.color = "red";
+      //   document.getElementById("text").style.fontSize="20px";
+      //   document.getElementById("text").style.backgroundColor="pink";
+      //   document.getElementById("text1").classList.add("highlight");
+      // document.querySelector(".highlight").textContent="the clas is changed now";
+      document.getElementById("text1").style.backgroundColor = "Green";
+      // temp.innerHTML=s;
+      function changeText() {
+        let a1 = document.getElementById("demo");
+        a1.textContent = "new Text";
+      }
+
+      //Select Elements
+      document.getElementById("id");
+      document.getElementsByClassName("class");
+      document.getElementsByTagName("tag");
+      document.querySelector(".class");
+      document.querySelector("#id");
+      document.querySelectorAll(".class");
+
+      //create / modify elements
+      document.createElement("div");
+      element.innerHTML = "<p>Hello</p>";
+      element.textContent = "Hello";
+      element.setAttribute("class", "box");
+      element.getAttribute("class");
+      element.removeAttribute("class");
+
+      //Add/remove classes
+      element.classList.add("active");
+      element.classList.remove("active");
+      element.classList.toggle("active");
+      element.classList.contains("active");
+
+      //Event handling
+      element.addEventListener("click", function () {
+        console.log("clicked");
+      });
+
+      //change styles
+      element.style.color = "red";
+      element.style.backgroundColor = "black";
+      element.style.display = "none";
+
+      //adding remove nodes
+      parent.appendChild(child);
+      parent.removeChild(child);
+      parent.replaceChild(newNode, oldNode);
+
+      //Form values
+      document.getElementById("input").value;
+
+      //Treaversing
+      element.parentNode;
+      element.childNodes;
+      element.firstChild;
+      element.lastChild;
+      element.nextSibling;
+      element.previousSibling;
+
+      //Most important 10 to remember
+      // getElementById()
+      // querySelector()
+      // querySelectorAll()
+      // addEventListener()
+      // createElement()
+      // appendChild()
+      // textContent
+      // innerHTML
+      // classList.add()
+      // style
+    </script>
+  </body>
+</html>

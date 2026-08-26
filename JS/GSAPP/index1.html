@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background: red;
+      }
+    </style>
+    <div class="box">
+      
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script>
+      // This moves the box 200px to the right over 1 second
+      // gsap.to(".box", {
+      //   x: 400,
+      //   opacity:0,
+      //   duration:4,
+      //   background:"blue-900"});
+      // gsap.from(".box", {
+      //   x: -200,
+      //   opacity:0,
+      //   duration:2,
+      //   background:"blue-900"});
+      gsap.fromTo(
+        ".box",
+        {
+          x: -200
+          // opacity:0,
+          // duration:2,
+          // background:"blue-900"
+        },
+        { x: 200 }
+      );
+    </script>
+  </body>
+</html>

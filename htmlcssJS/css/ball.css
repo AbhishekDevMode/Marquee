@@ -1,0 +1,65 @@
+*{
+    width: 100%;
+    height: 100%;
+}
+
+html,body{
+    height: inherit;
+    width: 100%;
+    background-color: black;
+}
+
+.ball{
+    border-radius: 50%;
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+    animation: falldown 8s linear 1s infinite;
+}
+
+.box{
+    color: antiquewhite;
+    background-color: antiquewhite;
+    width: 300px;
+    height: 150px;
+}
+
+.box2{
+    color: antiquewhite;
+    background-color: antiquewhite;
+    width: 500px;
+    height: 150px;
+}
+
+.box3{
+    color: antiquewhite;
+    background-color: antiquewhite;
+    width: 700px;
+    height: 150px;
+}
+
+.box4{
+    color: antiquewhite;
+    background-color: antiquewhite;
+    width: 900px;
+    height: 200px;
+}
+
+@keyframes falldown{
+    0% { transform: translate(0px, 0px); }
+    15% { transform: translate(300px, 0px); }
+
+    20% { transform: translate(300px, 150px); } 
+
+
+    35% { transform: translate(500px, 150px); }
+    40% { transform: translate(500px, 300px); }
+
+    55% { transform: translate(700px, 300px); }
+    60% { transform: translate(700px, 450px); } 
+
+    75% { transform: translate(900px, 450px); } 
+    80% { transform: translate(900px, 650px); } 
+
+    100% { transform: translate(1200px, 650px); } 
+}

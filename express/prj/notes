@@ -1,0 +1,6 @@
+mideelware is a special types of function through which every request passes in business logic layer
+types middleware
+1.Inbuilt
+2.Custom 
+i.simple Custom
+ii.Specific Custom

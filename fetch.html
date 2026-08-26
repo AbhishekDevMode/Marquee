@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .div {
+      width: 100px;
+      height: 100px;
+      border: 2px solid red;
+      border-radius: 5px;
+    }
+  </style>
+  <body>
+    <h1>this is home</h1>
+    <form action="">
+      <input type="text" name="" id="" />
+    </form>
+  </body>
+  <script>
+    fetch("http://127.0.0.1:3000/employees")
+      .then((data) => {
+        return data.json();
+      })
+      .then((datajson) => {
+        console.log(datajson);
+
+        datajson.forEach((employee) => {
+          let newDiv = document.createElement("div");
+          document.body.appendChild(newDiv);
+          newDiv.innerHTML=`<p> employee</p>`
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    // fetch("http://127.0.0.1:3000/employees", (err, data) => {
+    //   if (err) {
+    //     console.log(err);
+    //   } else {
+    //     console.log(data);
+    //   }
+
+    // });
+  </script>
+</html>

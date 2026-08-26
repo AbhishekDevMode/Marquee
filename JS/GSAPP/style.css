@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #000000;
+}
+#page1 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  border-radius: 12px;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.card1 {
+  background-color: #ff3366;
+}
+.card2 {
+  background-color: #33ff66;
+}
+.card3 {
+  background-color: #3366ff;
+}
+.card4 {
+  background-color: yellow;
+}
+.abhishek span {
+  opacity: 0;
+  display: inline-block;
+  transform: translateY(20px);
+  animation: fadeUp 0.5s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

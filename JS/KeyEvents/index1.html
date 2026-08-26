@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Move Player</title>
+    <style>
+      .player {
+        height: 100px;
+        width: 100px;
+        background-color: brown;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .target {
+        height: 100px;
+        width: 100px;
+        background-color: blue;
+        position: absolute;
+        top: 200px;
+        left: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="player">P</div>
+    <div class="target">T</div>
+
+    <script>
+      let player = document.querySelector(".player");
+      let x = 100;
+      let y = 300;
+
+      // Listen on the whole document, not the div
+    //   document.addEventListener("keydown", (e) => {
+    //     if (e.key === "ArrowUp") y -= 10;
+    //     if (e.key === "ArrowDown") y += 10;
+    //     if (e.key === "ArrowLeft") x -= 10;
+    //     if (e.key === "ArrowRight") x += 10;
+
+    //     player.style.top = y + "px";
+    //     player.style.left = x + "px";
+    //   });
+player.addEventListener('keydown', (e)=>{
+    if(e.key==='w')y-=10;
+    if(e.key==='a')x-=10;
+    if(e.key==='s')y+=10;
+    if(e.key==='d')x+=10;
+    player.style.top=y+"px";
+    player.style.left=x+"px";
+    let prect=player.getBoundingClientRect();
+    let rect=target.getBoundingClientRect();
+})
+
+    </script>
+  </body>
+</html>

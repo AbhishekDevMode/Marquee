@@ -1,0 +1,25 @@
+//types of error
+
+//syntax error
+//runtime error
+//logical errror
+
+//built  in  error classes
+
+//reference error
+//TypeError
+//URIError
+//SyntaxError
+//RangeError
+//EvalError
+//AggregatorError (Introduction Error,detail with promises)
+
+//Error object
+//error.name
+//error.message
+//error.stack
+// console.log("A")
+let a = 10;
+if (a < 4) {
+  console.log("a");
+}

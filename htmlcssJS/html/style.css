@@ -1,0 +1,181 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: rgb(11, 188, 132);
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  gap: 20px;
+}
+
+.par {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background-image: url(img/1.avif);
+  background-size: cover;
+  z-index: 0;
+}
+.bg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background-size: cover;
+}
+.bg1 {
+  background-image: url(img/2.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bg2 {
+  background-image: url(img/3.avif);
+}
+.bg3 {
+  background-image: url(img/4.avif);
+}
+.box1:hover ~ .bg1 {
+  opacity: 1;
+}
+.box2:hover ~ .bg2 {
+  opacity: 1;
+}
+.box3:hover ~ .bg3 {
+  opacity: 1;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  border: 2px solid white;
+  cursor: pointer;
+  z-index: 2;
+}
+.box1{
+    background-image: url(img/2.avif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.box2{
+    background-image: url(img/3.avif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.box3{
+    background-image: url(img/4.avif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* 
+.box1 {
+  width: 100px;
+  height: 100px;
+  background-image: url(img/2.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.box1:hover {
+  .par {
+    background-image: url(img/2.avif);
+  }
+}
+.box2:hover {
+  .par {
+    background-image: url(img/3.avif);
+  }
+}
+.box3:hover {
+  .par {
+    background-image: url(img/4.avif);
+  }
+} */
+
+
+/* .box3 {
+  width: 100px;
+  height: 100px;
+  background-image: url(img/4.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+}
+h1:hover {
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+a::after {
+  content: "";
+  position: absolute;
+}
+a::before {
+  content: "";
+  width: 3px;
+  height: 2px;
+  position: absolute;
+  bottom: 0px;
+  background-color: black;
+  transition: 0.3s ease;
+}
+a:hover::before {
+  width: 100px;
+}
+input {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  border-style: none;
+}
+input:focus {
+  background-color: aqua;
+}
+/* Example styling for a clean table look */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Merges double borders into a single line */
+}
+
+th, td {
+  border: 1px solid #000;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: red; /* As seen in your layout */
+  color: white;
+}

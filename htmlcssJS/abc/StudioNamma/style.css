@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+    --_responsive---font-size--main: 1.25rem;
+        --_responsive---line-height--main: 1.65rem;
+        --_responsive---font-size--h1: 9.5rem;
+        --_responsive---line-height--h1: 7.75rem;
+        --_responsive---font-size--h2: 7rem;
+        --_responsive---line-height--h2: 6.25rem;
+        --_responsive---font-size--h3: 3rem;
+        --_responsive---line-height--h3: 2.9rem;
+        --_responsive---font-size--h4: 1.9rem;
+        --_responsive---line-height--h4: 2rem;
+        --_responsive---container--padding: 1.25rem;
+        --_responsive---font-size--mono: .9rem;
+        --_responsive---line-height--mono: 1rem;
+        --_responsive---other--border-radius: .3rem;
+        --_responsive---container--pixel: 10%;
+}
+
+.header {
+    height: 84px;
+    background: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+}
+
+.logo,.nav a,.cta {
+    color: #d8d8d8;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.nav {
+    display: flex;
+    gap: 220px; 
+}
+.hero {
+    min-height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero h1 {
+    font-family: 'Anton', sans-serif;
+    color: #d8d8d8;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: clamp(7rem, 15vw, 16rem);
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+    font-weight: 400;
+}
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 30px;
+    right: 40px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer .left-side {
+    color: #ffffff;
+    font-family: "Mixtape (otf)", monospace;
+    font-size: 14px;
+    margin-left: 50px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.clock {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: #fffdfd;
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.location-wrapper {
+    height: 24px;
+    overflow: hidden;
+}
+
+#location {
+    display: inline-block;
+}
+
+.slide-up {
+    animation: slideUp 0.6s ease;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cursor-video {
+    position: fixed;
+    width: 290px;
+    height: 370px;
+    object-fit: cover;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 9999;
+    transition: opacity 0.2s ease;
+}
+
+.cursor-video.is-visible {
+    opacity: 1;
+}
+
+.work {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.video-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.video-content h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(4rem, 12vw, 10rem);
+    text-transform: uppercase;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+}
+
+.video-content p {
+    font-family: "Courier New", monospace;
+    letter-spacing: 8px;
+    font-size: 16px;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+/* ===== THIRD PAGE ===== */
+
+.branding {
+    min-height: 100vh;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    text-align: center;
+}
+
+.branding-top {
+    font-family: " Gt Pressura Mono", Georgia, sans-serif;
+    color: #d8d8d8;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 13px;
+    margin-bottom: 60px;
+}
+
+.branding-text h2 {
+    font-family: 'Anton', sans-serif;
+    color: #d8d8d8;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: clamp(1rem, 6vw, 5rem);
+    line-height: 1.1;
+    letter-spacing: 0.4;
+}
+
+.underline {
+    position: relative;
+    display: inline-block;
+}
+
+.underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    background: #d8d8d8;
+}
+.hover-gallery {
+    position: fixed;
+    width: 300px;
+    height: 400px;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.hover-gallery img {
+    position: absolute;
+    object-fit: cover;
+    border-radius: 10px;
+
+    opacity: 0;
+
+  .hover-gallery img {
+    transition:
+    opacity 0.1s ease,
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+}
+
+/* Portrait Images (1,3,5) */
+.hover-gallery img:nth-child(odd) {
+    width: 200px;
+    height: 300px;
+
+    transform: translateY(150px) rotate(-4deg);
+}
+
+/* Landscape Images (2,4) */
+.hover-gallery img:nth-child(even) {
+    width: 300px;
+    height: 200px;
+
+    transform: translateY(150px) rotate(4deg);
+}
+
+/* Active Portrait */
+.hover-gallery img:nth-child(odd).active {
+    opacity: 1;
+    transform: translateY(0) rotate(-4deg);
+}
+
+/* Active Landscape */
+.hover-gallery img:nth-child(even).active {
+    opacity: 1;
+    transform: translateY(0) rotate(4deg);
+}
+
+.hover-word {
+    cursor: pointer;
+}
+
+.hover-gallery img.active {
+    animation: imagePop 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes imagePop {
+
+    0% {
+        opacity: 0;
+        transform: translateY(180px) scale(0.95);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(-12px) scale(1.02);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

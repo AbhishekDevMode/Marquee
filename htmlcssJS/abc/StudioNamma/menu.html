@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .box {
+        height: 100px;
+        width: 100px;
+        border: 2px solid red;
+        /* background: #000; */
+      }
+      .aqx{
+        position: relative;
+      }
+      .box1{
+        position:absolute;
+        background-color: blue;
+      }
+      .box2{
+        position:absolute;
+        background-color: red;
+      }
+      .box2:hover{
+        left: 100px;
+        transition:1s ease;
+        transform: translateX(100px);
+      }
+
+    </style>
+    <div class="aqx">
+      <div class="box box1">box1</div>
+      <div class="box box2">box2</div>
+    </div>
+  </body>
+</html>

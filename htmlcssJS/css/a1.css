@@ -1,0 +1,162 @@
+/* } */
+/* border-bottom-width: 5px; */
+/* border-bottom-style: solid; */
+/* border-bottom-color: lightblue; */
+/* } */
+.bg {
+  width: 200px;
+  height: 50px;
+  background-color: blue;
+  border-radius: 50%;
+}
+/* 
+@keyframes bouncing {
+    
+}
+a {
+  text-decoration: none;
+  font-size: 90px;
+  position: relative;
+}
+a::before {
+  content: "Abhishek";
+  width: 0px;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  bottom: 0px;
+  transition: all 3s ease;
+}
+a:hover::before {
+  width: 100%;
+  content: "";
+} */
+
+.box1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: blue;
+  /* ease-in-out makes the start and end of the jump smoother */
+  animation: stair-jump 4s ease-in-out infinite;
+}
+
+@keyframes stair-jump {
+  /* Starting on the top step */
+  0% {
+    transform: translate(0, 0);
+  }
+
+  /* STEP 1: Arc to the first step */
+  15% { transform: translate(300px, 0px); }  /* Mid-air peak */
+  20% { transform: translate(80px, 100px); }  /* Land on Step 1 */
+
+  /* STEP 2: Arc to the second step */
+  45% { transform: translate(120px, 70px); }  /* Mid-air peak */
+  60% { transform: translate(160px, 200px); } /* Land on Step 2 */
+
+  /* STEP 3: Arc to the ground */
+  75% { transform: translate(200px, 170px); } /* Mid-air peak */
+  90% { transform: translate(240px, 300px); } /* Land on Ground */
+
+  /* Stay on ground briefly before restart */
+  100% {
+    transform: translate(240px, 300px);
+  }
+}
+
+/* @keyframes stair-jump {
+  /* Starting on the top step */
+  /* 0% {
+    transform: translate(0, 0);
+  }
+
+  /* STEP 1: Arc to the first step */
+  15% { transform: translate(40px, -30px); }  /* Mid-air peak */
+  30% { transform: translate(80px, 100px); }  /* Land on Step 1 */
+
+  /* STEP 2: Arc to the second step */
+  45% { transform: translate(120px, 70px); }  /* Mid-air peak */
+  60% { transform: translate(160px, 200px); } /* Land on Step 2 */
+
+  /* STEP 3: Arc to the ground */
+  75% { transform: translate(200px, 170px); } /* Mid-air peak */
+  90% { transform: translate(240px, 300px); } /* Land on Ground */
+
+  /* Stay on ground briefly before restart */
+  100% {
+    transform: translate(240px, 300px);
+  }
+} */ */
+
+/* @keyframes stair-jump {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(30px, -40px);
+  }
+  20% {
+    transform: translate(60px, 100px);
+  }
+  30% {
+    transform: translate(90px, 80px);
+  }
+  40% {
+    transform: translate(120px, 200px);
+  }
+
+  50% {
+    transform: translate(150px, 180px);
+  }
+  60% {
+    transform: translate(180px, 300px);
+  }
+
+  70% {
+    transform: translate(210px, 250px);
+  }
+  80% {
+    transform: translate(240px, 300px);
+  }
+  90%{
+    transform: translate(240px, 300px);
+    
+  }
+  100%{
+    transform: translate(240px, 300px);
+
+  }
+/* @keyframes stair-jump {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  12% {
+    transform: translate(30px, 0px);
+  }
+  25% {
+    transform: translate(60px, 100px);
+  }
+  37% {
+    transform: translate(90px, 80px);
+  }
+  50% {
+    transform: translate(120px, 200px);
+  }
+
+  62% {
+    transform: translate(150px, 180px);
+  }
+  75% {
+    transform: translate(180px, 300px);
+  }
+
+  85% {
+    transform: translate(210px, 250px);
+  }
+  100% {
+    transform: translate(240px, 300px);
+  } */
+/* } */ */

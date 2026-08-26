@@ -1,0 +1,61 @@
+/* Full-screen overlay container */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;   
+    height: 100vh; 
+    background-color: #000000; 
+    z-index: 9999;  
+    display: flex;
+    justify-content:flex-start;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease; 
+}
+
+/* Class that JavaScript will toggle to show the menu */
+.menu-overlay.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Container for your menu links */
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+}
+
+/* Individual links inside overlay */
+.menu-content a {
+    color: #ffffff;
+    font-size: 4.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.menu-content a:hover {
+    color: #888888; 
+    position: relative;
+    transform: translateX(120px);
+    transition:0.9s ease;
+    left: 0px;
+
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    line-height: 1;
+}

@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Learn Animations with HTML, CSS & JavaScript</title>
+  </head>
+  <body>
+    
+    <div class="container">
+
+      <h1>🎬 Animations Learning Guide</h1>
+
+      <!-- Section 1: CSS Animations (Keyframes) -->
+      <!-- <section class="section">
+        <h2>1. CSS Animations (Keyframes)</h2>
+        <div class="demo-grid">
+          <div class="box slide">Slide</div>
+          <div class="box fade">Fade</div>
+          <div class="box scale">Scale</div>
+          <div
+           class="box rotate">Rotate</div>
+        </div>
+        <p class="description">
+          CSS animations use @keyframes to define animation sequences
+        </p>
+      </section> -->
+
+      <!-- Section 2: CSS Transitions -->
+      <!-- <section class="section">
+        <h2>2. CSS Transitions (Hover Effects)</h2>
+        <div class="demo-grid">
+          <div class="box transition-box" id="box1">Hover Me</div>
+          <div class="box transition-box" id="box2">Color Change</div>
+          <div class="box transition-box" id="box3">Transform</div>
+        </div>
+        <p class="description">
+          CSS transitions create smooth changes between states
+        </p>
+      </section> -->
+
+      <!-- Section 3: JavaScript Animations -->
+      <section class="section">
+        <h2>3. JavaScript Animations</h2>
+        <div class="demo-grid">
+          <div class="box" id="jsBox1">JS Move</div>
+          <div class="box" id="jsBox2">Bounce</div>
+          <div class="box" id="jsBox3">Pulse</div>
+        </div>
+        <div class="controls">
+          <button onclick="animateJSBox1()">Start Move</button>
+          <button onclick="animateBounce()">Start Bounce</button>
+          <button onclick="animatePulse()">Start Pulse</button>
+        </div>
+        <p class="description">
+          JavaScript gives you full control over animations
+        </p>
+      </section>
+
+      <!-- Section 4: RequestAnimationFrame -->
+      <!-- <section class="section">
+        <h2>4. RequestAnimationFrame (RAF)</h2>
+        <div class="demo-grid">
+          <div class="box" id="rafBox">Smooth Animation</div>
+          <div class="box" id="rafBox2">Circle Motion</div>
+        </div>
+        <div class="controls">
+          <button onclick="startRAFAnimation()">Start RAF Animation</button>
+          <button onclick="startCircleMotion()">Start Circle</button>
+          <button onclick="stopAllAnimations()">Stop All</button>
+        </div>
+        <p class="description">
+          RequestAnimationFrame is optimized for smooth 60fps animations
+        </p>
+      </section> -->
+
+      <!-- Section 5: Complex Animations -->
+      <!-- <section class="section">
+        <h2>5. Complex Animations</h2>
+        <div class="demo-grid">
+          <div class="morphing-box" id="morphBox"></div>
+          <div class="particle-container" id="particleContainer"></div>
+        </div>
+        <div class="controls">
+          <button onclick="startMorphing()">Start Morphing</button>
+          <button onclick="createParticles()">Create Particles</button>
+        </div>
+        <p class="description">
+          Combine multiple animations for complex effects
+        </p>
+      </section> -->
+
+      <!-- Section 6: Animation Properties -->
+      <!-- <section class="section info-section">
+        <h2>📚 Key Animation Concepts</h2>
+        <div class="info-grid">
+          <div class="info-box">
+            <h3>CSS Animation Properties</h3>
+            <ul>
+              <li><code>animation-name</code> - Name of animation</li>
+              <li><code>animation-duration</code> - How long (2s, 500ms)</li>
+              <li><code>animation-delay</code> - Wait before start</li>
+              <li><code>animation-iteration-count</code> - How many times</li>
+              <li>
+                <code>animation-timing-function</code> - ease, linear,
+                cubic-bezier
+              </li>
+              <li>
+                <code>animation-fill-mode</code> - forwards, backwards, both
+              </li>
+            </ul>
+          </div>
+          <div class="info-box">
+            <h3>JavaScript Methods</h3>
+            <ul>
+              <li>
+                <code>requestAnimationFrame()</code> - 60fps smooth animations
+              </li>
+              <li><code>setInterval()</code> - Repeat every X ms</li>
+              <li><code>setTimeout()</code> - Execute after delay</li>
+              <li>
+                <code>element.style.transform</code> - Change position/rotation
+              </li>
+              <li><code>element.style.opacity</code> - Change visibility</li>
+              <li><code>getComputedStyle()</code> - Get current styles</li>
+            </ul>
+          </div>
+          <div class="info-box">
+            <h3>Timing Functions</h3>
+            <ul>
+              <li><code>linear</code> - Constant speed</li>
+              <li><code>ease</code> - Slow start and end</li>
+              <li><code>ease-in</code> - Slow start</li>
+              <li><code>ease-out</code> - Slow end</li>
+              <li><code>ease-in-out</code> - Slow both ends</li>
+              <li><code>cubic-bezier()</code> - Custom curves</li>
+            </ul>
+          </div>
+          <div class="info-box">
+            <h3>Transform Properties</h3>
+            <ul>
+              <li><code>translate(x, y)</code> - Move element</li>
+              <li><code>rotate(deg)</code> - Rotate clockwise</li>
+              <li><code>scale(x, y)</code> - Resize element</li>
+              <li><code>skew(x, y)</code> - Slant element</li>
+              <li><code>transform-origin</code> - Set rotation center</li>
+              <li><code>perspective</code> - 3D effect</li>
+            </ul>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- Section 7: Code Examples -->
+      <!-- <section class="section info-section">
+        <h2>💻 Code Examples</h2>
+        <div class="code-example">
+          <h3>Example 1: Simple CSS Animation</h3>
+          <pre><code>@keyframes slide {
+  from {
+    left: 0;
+  }
+  to {
+    left: 300px;
+  }
+}
+
+.slide {
+  animation: slide 2s ease-in-out infinite;
+}</code></pre>
+        </div>
+        <div class="code-example">
+          <h3>Example 2: JavaScript Animation Loop</h3>
+          <pre><code>let position = 0;
+let element = document.getElementById('box');
+
+function animate() {
+  position += 5;
+  element.style.left = position + 'px';
+  
+  if (position < 300) {
+    requestAnimationFrame(animate);
+  }
+}
+
+animate();</code></pre>
+        </div>
+        <div class="code-example">
+          <h3>Example 3: Smooth Easing Function</h3>
+          <pre><code>function easeInOutQuad(t) {
+  return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+}
+
+let startTime = Date.now();
+const duration = 2000; // 2 seconds
+
+function animateWithEasing() {
+  let elapsed = Date.now() - startTime;
+  let progress = Math.min(elapsed / duration, 1);
+  let easeProgress = easeInOutQuad(progress);
+  
+  element.style.left = easeProgress * 300 + 'px';
+  
+  if (progress < 1) {
+    requestAnimationFrame(animateWithEasing);
+  }
+}</code></pre>
+        </div>
+      </section> -->
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

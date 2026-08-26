@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>particular</title>
+  </head>
+  <body>
+    <script>
+      console.log(window.location.href);
+      let splittedUrl = window.location.href.split("/");
+      console.log(splittedUrl[splittedURL.length - 1]);
+
+      let courseId = splittedUrl[splittedUrl.length - 1];
+
+      fetch(`http://127.0.0.1:3000/course/:${id}`)
+        .then((data) => {
+          return data.json();
+        })
+        .then((datajson) => {
+          console.log(datajson);
+          let newDiv = document.createElement("div");
+          newDiv.innerHTML = `${datajson.course_name}`;
+          document.body.appendChild(newDiv);
+        });
+    </script>
+  </body>
+</html>

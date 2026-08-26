@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Move Player</title>
+  </head>
+  <body>
+    <style>
+      .p {
+        width: 100px;
+        height: 100px;
+        background-color: Blue;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+    </style>
+
+    <div class="p" id="player"></div>
+
+    <script>
+      // 1. Select the player element
+      const player = document.getElementById("player");
+
+      // 2. Track the player's position and speed
+      let x = 0;
+      let y = 0;
+      const speed = 15; // Change this number to make the player move faster or slower
+
+      document.addEventListener("keydown", (event) => {
+        // Prevent the default browser behavior (like scrolling)
+        if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", " "].includes(event.key)) {
+          event.preventDefault();
+        }
+
+        // 3. Update coordinates based on key press
+        switch (event.key) {
+          case "ArrowUp":
+          case "w":
+          case "W":
+            y -= speed; // Moving up decreases y coordinate
+            break;
+
+          case "ArrowDown":
+          case "s":
+          case "S":
+            y += speed; // Moving down increases y coordinate
+            break;
+
+          case "ArrowLeft":
+          case "a":
+          case "A":
+            x -= speed; // Moving left decreases x coordinate
+            break;
+
+          case "ArrowRight":
+          case "d":
+          case "D":
+            x += speed; // Moving right increases x coordinate
+            break;
+        }
+
+        // 4. Render the new position to the screen
+        player.style.top = y + "px";
+        player.style.left = x + "px";
+      });
+    </script>
+  </body>
+</html>

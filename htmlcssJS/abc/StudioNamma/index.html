@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studio Namma</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">STUDIO NAMMA</div>
+
+      <nav class="nav">
+        <a href="#">LIGHT MODE</a>
+        <a href="#" id="menu-trigger">MENU</a>
+      </nav>
+
+      <a href="#" class="cta">LET’S TALK!</a>
+      <div id="fullScreenMenu" class="menu-overlay">
+        <button class="close-btn" id="close-trigger">&times;</button>
+
+        <div class="menu-content">
+          <a href="#">HOME</a>
+          <a href="#">WORK</a>
+          <a href="#">SERVICES</a>
+          <a href="#">APPROACH</a>
+          <a href="#">STUDIO</a>
+          <a href="#">PLANS</a>
+          <a href="#">NEWS</a>
+        </div>
+      </div>
+    </header>
+
+    <footer class="footer">
+      <div class="left-side">
+        <span>We craft bold design & clean Webflow.</span>
+      </div>
+      <div class="clock">
+        <div class="location-wrapper">
+          <span id="location"></span>
+        </div>
+
+        <span id="time"></span>
+      </div>
+    </footer>
+    <section class="hero">
+      <h1>
+        WE THINK<br />
+        CRAFT AND<br />
+        DESIGN
+      </h1>
+    </section>
+
+    <!-- page2 -->
+
+    <section class="work">
+      <video
+        class="bg-video"
+        src="page2video.mp4"
+        muted
+        autoplay
+        loop
+        playsinline
+      ></video>
+      <div class="video-content"></div>
+    </section>
+
+    <!-- page3  -->
+    <section class="branding">
+      <div class="branding-top">CREATIVE STUDIO BUILDING PREMIUM BRANDS</div>
+      <div class="branding-text">
+        <h2>
+          IT'S NEVER "JUST A WEBSITE."<br />
+          EVERY
+          <span class="underline hover-word" data-gallery="detail">
+            DETAIL</span
+          >
+          MATTERS.<br />
+          WE CRAFT DIGITAL EXPERIENCES.<br />
+          YOUR DESIGN. OUR OBSESSION.<br />
+          YOUR BRAND. OUR
+          <span class="underline hover-word" data-gallery="playground">
+            PLAYGROUND</span
+          >.
+        </h2>
+      </div>
+    </section>
+
+    <div class="hover-gallery">
+      <img src="images/img1.jpg" alt="" />
+      <img src="images/img2.jpg" alt="" />
+      <img src="images/img3.jpg" alt="" />
+      <img src="images/img4.jpg" alt="" />
+      <img src="images/img5.jpg" alt="" />
+    </div>
+
+    <video
+      class="cursor-video"
+      src="cursor.mp4"
+      muted
+      autoplay
+      loop
+      playsinline
+      preload="auto"
+    ></video>
+    <script src="script.js"></script>
+    <script src="menu.js"></script>
+  </body>
+</html>
